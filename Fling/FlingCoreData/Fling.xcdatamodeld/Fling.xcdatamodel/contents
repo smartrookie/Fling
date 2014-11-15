@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CFling" representedClassName="CFling" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="flingID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isMeSender" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isNewFling" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="lastReply" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="province" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unReadReplyCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="video" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="messageHistory" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CMessage" inverseName="cFling" inverseEntity="CMessage" syncable="YES"/>
+    </entity>
+    <entity name="CMessage" representedClassName="CMessage" syncable="YES">
+        <attribute name="mesId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="video" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cFling" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CFling" inverseName="messageHistory" inverseEntity="CFling" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CFling" positionX="-63" positionY="-18" width="128" height="343"/>
+        <element name="CMessage" positionX="-54" positionY="-9" width="128" height="133"/>
+    </elements>
+</model>
