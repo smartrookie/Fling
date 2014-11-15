@@ -38,6 +38,61 @@
     
     return fling;
 }
+
+- (CFling *)storeCFlingByDictionary:(NSDictionary *)dictionay
+{
+    NSManagedObjectContext *context = self.managedObjectContext;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"CFling" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setFetchBatchSize:20];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"flingID = %@",dictionay[@"id"]];
+    [fetchRequest setPredicate:predicate];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"time" ascending:NO];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+
+    NSError *error = nil;
+    if (![aFetchedResultsController performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    NSArray *fetchedObjects = aFetchedResultsController.fetchedObjects;
+    
+    CFling *fling;
+    
+    if ([fetchedObjects count]) {       //存在
+        fling = fetchedObjects[0];
+    } else {                            //不存在
+        fling = [self newCFling];
+        fling.age               = dictionay[@"age"];
+        fling.avatar            = dictionay[@"avatar"];
+        fling.city              = dictionay[@"city"];
+        fling.distance          = dictionay[@"distance"];
+        fling.flingID           = [dictionay[@"id"] stringValue];
+        fling.isMeSender        = dictionay[@"is_me_sender"];
+        fling.lastReply         = dictionay[@"last_reply"];
+        fling.latitude          = dictionay[@"latitude"];
+        fling.longitude         = dictionay[@"longitude"];
+        fling.nickname          = dictionay[@"nickname"];
+        fling.note              = dictionay[@"text"];
+        fling.picture           = dictionay[@"picture"];
+        fling.province          = dictionay[@"province"];
+        fling.time              = [dictionay[@"time"] stringValue];
+        fling.video             = dictionay[@"video"];
+        fling.x                 = dictionay[@"x"];
+        fling.y                 = dictionay[@"y"];
+        fling.unReadReplyCount  = dictionay[@"last_reply_count"];
+    }
+    return fling;
+}
+
 - (CMessage *)newCMessage {
     NSManagedObjectContext *context = [self managedObjectContext];
     NSEntityDescription *messageDes = [NSEntityDescription entityForName:@"CMessage" inManagedObjectContext:context];

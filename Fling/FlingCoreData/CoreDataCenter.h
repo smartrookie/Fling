@@ -21,9 +21,12 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
-
 - (CFling *)newCFling;
 - (CMessage *)newCMessage;
+
+- (CFling *)storeCFlingByDictionary:(NSDictionary *)dictionay;
+
+
 
 - (NSFetchedResultsController *)fetchedResultsControllerAllFling;
 

@@ -175,27 +175,11 @@
 }
 
 - (void)updateInboxList:(NSArray *)infoArray {
-    for (NSDictionary *infoDic in infoArray) {
-        CFling *fling = [[CoreDataCenter shareInstance] newCFling];
-        
-        fling.age           = [infoDic objectForKey:@"age"];
-        fling.avatar        = [infoDic objectForKey:@"avatar"];
-        fling.city          = [infoDic objectForKey:@"city"];
-        fling.distance      = [infoDic objectForKey:@"distance"];
-        fling.flingID       = [[infoDic objectForKey:@"id"] stringValue];
-        fling.isMeSender    = [infoDic objectForKey:@"is_me_sender"];
-        fling.lastReply     = [infoDic objectForKey:@"last_reply"];
-        fling.latitude      = [infoDic objectForKey:@"latitude"];
-        fling.longitude     = [infoDic objectForKey:@"longitude"];
-        fling.nickname      = [infoDic objectForKey:@"nickname"];
-        fling.note          = [infoDic objectForKey:@"text"];
-        fling.picture       = [infoDic objectForKey:@"picture"];
-        fling.province      = [infoDic objectForKey:@"province"];
-        fling.time          = [[infoDic objectForKey:@"time"] stringValue];
-        fling.video         = [infoDic objectForKey:@"video"];
-        fling.x             = [infoDic objectForKey:@"x"];
-        fling.y             = [infoDic objectForKey:@"y"];
-        fling.unReadReplyCount = infoDic[@"last_reply_count"];
+    for (NSDictionary *flingDictionay in infoArray) {
+        /**
+         * 封装存储过程
+         */
+        [[CoreDataCenter shareInstance] storeCFlingByDictionary:flingDictionay];
     }
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
