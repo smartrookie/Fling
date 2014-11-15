@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Fling.h"
+#import "CFling.h"
 
 @interface InboxCell : UITableViewCell
 
-@property (strong, nonatomic) Fling *fling;
+@property (strong, nonatomic) CFling *fling;
 
 @end

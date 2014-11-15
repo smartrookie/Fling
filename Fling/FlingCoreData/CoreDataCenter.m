@@ -69,6 +69,8 @@
     
     if ([fetchedObjects count]) {       //存在
         fling = fetchedObjects[0];
+        fling.lastReply         = dictionay[@"last_reply"];
+        fling.unReadReplyCount  = dictionay[@"last_reply_count"];
     } else {                            //不存在
         fling = [self newCFling];
         fling.age               = dictionay[@"age"];
@@ -89,6 +91,7 @@
         fling.x                 = dictionay[@"x"];
         fling.y                 = dictionay[@"y"];
         fling.unReadReplyCount  = dictionay[@"last_reply_count"];
+        fling.isNewFling        = @YES;
     }
     return fling;
 }

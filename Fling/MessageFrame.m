@@ -12,7 +12,7 @@
 
 @implementation MessageFrame
 
-- (void)setMessage:(Message *)message {
+- (void)setMessage:(CMessage *)message {
     _message = message;
     
     CGSize contentSize = [_message.text sizeWithFont:[UIFont systemFontOfSize:22.0f]

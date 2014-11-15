@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Message.h"
+#import "CMessage.h"
 
 @interface MessageFrame : NSObject
 
-@property (strong, nonatomic) Message *message;
+@property (strong, nonatomic) CMessage *message;
 @property (assign, nonatomic) CGFloat cellHeight;
 
 @end

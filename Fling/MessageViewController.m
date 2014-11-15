@@ -115,7 +115,7 @@
                                            noteLabel.alpha = 1.0f;
                                            noteLabel.text = _fling.note;
                                            
-                                           noteLabel.frame = CGRectMake(0, _fling.y, noteLabel.bounds.size.width, noteLabel.bounds.size.height);
+                                           noteLabel.frame = CGRectMake(0, _fling.y.floatValue, noteLabel.bounds.size.width, noteLabel.bounds.size.height);
                                        }
                                    }];
     }
@@ -144,15 +144,17 @@
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
              NSLog(@"chat history = %@", responseObject);
              
-//             NSArray *conversation = responseObject[@"conversation"];
-//             [conversation enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
-//                 CMessage *messgae = [[CoreDataCenter shareInstance] newCMessage];
-//                 messgae.mesId   = obj[@"id"];
-//                 messgae.picture = obj[@"picture"];
-//                 messgae.text    = obj[@"text"];
-//                 messgae.time    = obj[@"time"];
-//                 messgae.video   = obj[@"video"];
-//             }];
+             __weak CFling *cfling = _fling;
+             NSArray *conversation = responseObject[@"conversation"];
+             [conversation enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
+                 CMessage *messgae = [[CoreDataCenter shareInstance] newCMessage];
+                 messgae.mesId   = obj[@"id"];
+                 messgae.picture = obj[@"picture"];
+                 messgae.text    = obj[@"text"];
+                 messgae.time    = obj[@"time"];
+                 messgae.video   = obj[@"video"];
+                 [cfling addMessageHistoryObject:messgae];
+             }];
              
          }
          failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -256,9 +258,9 @@
 }
 
 - (void)addMessage:(NSString *)messageText type:(MessageType)messageType {
-    Message *message = [[Message alloc] init];
+    CMessage *message = [[CMessage alloc] init];
     message.text = messageText;
-    message.type = messageType;
+    message.type = @(messageType);
     
     MessageFrame *messageFrame = [[MessageFrame alloc] init];
     messageFrame.message = message;

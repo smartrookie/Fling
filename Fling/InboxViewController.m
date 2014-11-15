@@ -9,7 +9,7 @@
 #import "InboxViewController.h"
 #import "MessageViewController.h"
 #import "InboxCell.h"
-#import "Fling.h"
+#import "CFling.h"
 #import "SettingsViewController.h"
 #import "AFNetworking.h"
 #import "AFHTTPRequestOperationManager.h"
@@ -113,7 +113,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Fling *fling = [self.flingFetchedResultsController objectAtIndexPath:indexPath];
+    CFling *fling = [self.flingFetchedResultsController objectAtIndexPath:indexPath];
     
     MessageViewController *messageVC = [[MessageViewController alloc] init];
     messageVC.fling = fling;
@@ -222,6 +222,10 @@
         case NSFetchedResultsChangeDelete:
             [inboxTableView deleteSections:[NSIndexSet indexSetWithIndex:0]
                           withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeMove:
+            break;
+        case NSFetchedResultsChangeUpdate:
             break;
     }
 }

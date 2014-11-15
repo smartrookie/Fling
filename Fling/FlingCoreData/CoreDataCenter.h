@@ -11,6 +11,11 @@
 #import "CFling.h"
 #import "CMessage.h"
 
+typedef enum : NSUInteger {
+    MessageTypeMe,
+    MessageTypeOther,
+} MessageType;
+
 @interface CoreDataCenter : NSObject
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

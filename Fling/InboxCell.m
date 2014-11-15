@@ -68,7 +68,7 @@
     return self;
 }
 
-- (void)setFling:(Fling *)fling {
+- (void)setFling:(CFling *)fling {
     _fling = fling;
     
     [avatarImageView sd_setImageWithURL:[NSURL URLWithString:_fling.avatar]];

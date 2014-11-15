@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="CFling" representedClassName="CFling" syncable="YES">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,11 +27,12 @@
         <attribute name="picture" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="video" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cFling" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CFling" inverseName="messageHistory" inverseEntity="CFling" syncable="YES"/>
     </entity>
     <elements>
         <element name="CFling" positionX="-63" positionY="-18" width="128" height="343"/>
-        <element name="CMessage" positionX="-54" positionY="-9" width="128" height="133"/>
+        <element name="CMessage" positionX="-54" positionY="-9" width="128" height="150"/>
     </elements>
 </model>

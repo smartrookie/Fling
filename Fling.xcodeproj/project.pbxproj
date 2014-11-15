@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52706B411A172EEE00E407FC /* CMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52706B401A172EEE00E407FC /* CMessage.m */; };
 		52706B441A172F7200E407FC /* CFling.m in Sources */ = {isa = PBXBuildFile; fileRef = 52706B431A172F7200E407FC /* CFling.m */; };
 		5285F03B1A10BCEB00110D97 /* Fling.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5285F0391A10BCEB00110D97 /* Fling.xcdatamodeld */; };
 		5285F03E1A10BD2D00110D97 /* CoreDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5285F03D1A10BD2D00110D97 /* CoreDataCenter.m */; };
@@ -67,9 +66,7 @@
 		D077C8C71A0BD56000199821 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D077C8C61A0BD56000199821 /* list@2x.png */; };
 		D077C8CA1A0BEA6000199821 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D077C8C91A0BEA6000199821 /* MessageViewController.m */; };
 		D077C8CD1A0C927500199821 /* InboxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D077C8CC1A0C927500199821 /* InboxCell.m */; };
-		D077C8D01A0CBB4B00199821 /* Fling.m in Sources */ = {isa = PBXBuildFile; fileRef = D077C8CF1A0CBB4B00199821 /* Fling.m */; };
 		D077C8D21A0D040F00199821 /* uncover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D077C8D11A0D040F00199821 /* uncover@2x.png */; };
-		D077C8D51A0D197F00199821 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = D077C8D41A0D197F00199821 /* Message.m */; };
 		D077C8DB1A0D3B8300199821 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D077C8DA1A0D3B8300199821 /* MessageCell.m */; };
 		D077C8DE1A0D420D00199821 /* MessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D077C8DD1A0D420D00199821 /* MessageFrame.m */; };
 		D077C8E01A0E48BA00199821 /* write@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D077C8DF1A0E48BA00199821 /* write@2x.png */; };
@@ -82,6 +79,7 @@
 		D0EF74B91A124EF900332378 /* shutter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EF74B81A124EF900332378 /* shutter@2x.png */; };
 		D0EF74BD1A1274CA00332378 /* picture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EF74BC1A1274CA00332378 /* picture@2x.png */; };
 		D0EF74C11A1368AC00332378 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF74C01A1368AC00332378 /* VPImageCropperViewController.m */; };
+		E001274F1A179E7C00F16897 /* CMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E001274E1A179E7C00F16897 /* CMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +93,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		52706B3F1A172EEE00E407FC /* CMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMessage.h; sourceTree = "<group>"; };
-		52706B401A172EEE00E407FC /* CMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMessage.m; sourceTree = "<group>"; };
 		52706B421A172F7200E407FC /* CFling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFling.h; sourceTree = "<group>"; };
 		52706B431A172F7200E407FC /* CFling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFling.m; sourceTree = "<group>"; };
 		5285F03A1A10BCEB00110D97 /* Fling.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fling.xcdatamodel; sourceTree = "<group>"; };
@@ -200,11 +196,7 @@
 		D077C8C91A0BEA6000199821 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		D077C8CB1A0C927500199821 /* InboxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxCell.h; sourceTree = "<group>"; };
 		D077C8CC1A0C927500199821 /* InboxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxCell.m; sourceTree = "<group>"; };
-		D077C8CE1A0CBB4B00199821 /* Fling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fling.h; sourceTree = "<group>"; };
-		D077C8CF1A0CBB4B00199821 /* Fling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fling.m; sourceTree = "<group>"; };
 		D077C8D11A0D040F00199821 /* uncover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uncover@2x.png"; sourceTree = "<group>"; };
-		D077C8D31A0D197F00199821 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		D077C8D41A0D197F00199821 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		D077C8D91A0D3B8300199821 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		D077C8DA1A0D3B8300199821 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		D077C8DC1A0D420D00199821 /* MessageFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageFrame.h; sourceTree = "<group>"; };
@@ -222,6 +214,8 @@
 		D0EF74BC1A1274CA00332378 /* picture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture@2x.png"; sourceTree = "<group>"; };
 		D0EF74BF1A1368AC00332378 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
 		D0EF74C01A1368AC00332378 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
+		E001274D1A179E7C00F16897 /* CMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMessage.h; sourceTree = "<group>"; };
+		E001274E1A179E7C00F16897 /* CMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,8 +253,8 @@
 				5285F0391A10BCEB00110D97 /* Fling.xcdatamodeld */,
 				5285F03C1A10BD2D00110D97 /* CoreDataCenter.h */,
 				5285F03D1A10BD2D00110D97 /* CoreDataCenter.m */,
-				52706B3F1A172EEE00E407FC /* CMessage.h */,
-				52706B401A172EEE00E407FC /* CMessage.m */,
+				E001274D1A179E7C00F16897 /* CMessage.h */,
+				E001274E1A179E7C00F16897 /* CMessage.m */,
 				52706B421A172F7200E407FC /* CFling.h */,
 				52706B431A172F7200E407FC /* CFling.m */,
 			);
@@ -309,8 +303,6 @@
 				D024FEC719F4E75D00970600 /* InboxViewController.m */,
 				D077C8CB1A0C927500199821 /* InboxCell.h */,
 				D077C8CC1A0C927500199821 /* InboxCell.m */,
-				D077C8CE1A0CBB4B00199821 /* Fling.h */,
-				D077C8CF1A0CBB4B00199821 /* Fling.m */,
 				D077C8C81A0BEA6000199821 /* MessageViewController.h */,
 				D077C8C91A0BEA6000199821 /* MessageViewController.m */,
 				D077C8D91A0D3B8300199821 /* MessageCell.h */,
@@ -319,8 +311,6 @@
 				D077C91E1A0E9AB200199821 /* MessageInputView.m */,
 				D077C8DC1A0D420D00199821 /* MessageFrame.h */,
 				D077C8DD1A0D420D00199821 /* MessageFrame.m */,
-				D077C8D31A0D197F00199821 /* Message.h */,
-				D077C8D41A0D197F00199821 /* Message.m */,
 				D0EF74AD1A12352C00332378 /* SettingsViewController.h */,
 				D0EF74AE1A12352C00332378 /* SettingsViewController.m */,
 				D024FEA919F4E5F600970600 /* Images.xcassets */,
@@ -601,12 +591,12 @@
 				D024FEF719F4E75D00970600 /* SDWebImageManager.m in Sources */,
 				D024FEF119F4E75D00970600 /* NSData+ImageContentType.m in Sources */,
 				D024FF2019F5106B00970600 /* AFURLResponseSerialization.m in Sources */,
+				E001274F1A179E7C00F16897 /* CMessage.m in Sources */,
 				D077C8DB1A0D3B8300199821 /* MessageCell.m in Sources */,
 				D024FEF319F4E75D00970600 /* SDWebImageCompat.m in Sources */,
 				D024FEFF19F4E75D00970600 /* UIView+WebCacheOperation.m in Sources */,
 				D024FEFC19F4E75D00970600 /* UIImage+WebP.m in Sources */,
 				D077C8CA1A0BEA6000199821 /* MessageViewController.m in Sources */,
-				D077C8D51A0D197F00199821 /* Message.m in Sources */,
 				D0EF74AF1A12352C00332378 /* SettingsViewController.m in Sources */,
 				D024FF1E19F5106B00970600 /* AFURLConnectionOperation.m in Sources */,
 				D02B4F7C1A0095BD009F555B /* PhotoMarkView.m in Sources */,
@@ -618,7 +608,6 @@
 				D024FE9F19F4E5F600970600 /* AppDelegate.m in Sources */,
 				D024FEF919F4E75D00970600 /* UIButton+WebCache.m in Sources */,
 				D024FEF819F4E75D00970600 /* SDWebImagePrefetcher.m in Sources */,
-				52706B411A172EEE00E407FC /* CMessage.m in Sources */,
 				D077C8CD1A0C927500199821 /* InboxCell.m in Sources */,
 				D024FF2119F5106B00970600 /* AFURLSessionManager.m in Sources */,
 				5285F03E1A10BD2D00110D97 /* CoreDataCenter.m in Sources */,
@@ -636,7 +625,6 @@
 				D077C91F1A0E9AB200199821 /* MessageInputView.m in Sources */,
 				D024FEEE19F4E75D00970600 /* InboxViewController.m in Sources */,
 				D038A1D61A029D2100A8B08A /* OpenUDID.m in Sources */,
-				D077C8D01A0CBB4B00199821 /* Fling.m in Sources */,
 				D024FEFA19F4E75D00970600 /* UIImage+GIF.m in Sources */,
 				D0EF74C11A1368AC00332378 /* VPImageCropperViewController.m in Sources */,
 				D024FEF519F4E75D00970600 /* SDWebImageDownloader.m in Sources */,
